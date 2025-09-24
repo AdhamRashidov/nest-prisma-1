@@ -10,8 +10,8 @@ type User {
 }
 
 type Post {
-  """Example field (placeholder)"""
-  exampleField: Int!
+  id: Int!
+  title: String!
 }
 
 type Query {
@@ -44,12 +44,11 @@ input UpdateUserInput {
 }
 
 input CreatePostInput {
-  """Example field (placeholder)"""
-  exampleField: Int!
+  id: Int!
+  title: String!
 }
 
 input UpdatePostInput {
-  """Example field (placeholder)"""
-  exampleField: Int
   id: Int!
+  title: String
 }
