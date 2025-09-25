@@ -1,0 +1,78 @@
+# ------------------------------------------------------
+# THIS FILE WAS AUTOMATICALLY GENERATED (DO NOT MODIFY)
+# ------------------------------------------------------
+
+input CreateGroupInput {
+  name: String!
+}
+
+input CreateStudentInput {
+  age: Int!
+  email: String!
+  fullName: String!
+}
+
+input CreateUniversityInput {
+  address: String!
+  name: String!
+  number: Int!
+}
+
+type Group {
+  id: String!
+  name: String!
+}
+
+type Mutation {
+  createGroup(createGroupInput: CreateGroupInput!): Group!
+  createStudent(createStudentInput: CreateStudentInput!): Student!
+  createUniversity(createUniversityInput: CreateUniversityInput!): University!
+  removeGroup(id: String!): [Group!]!
+  removeStudent(id: String!): [Student!]!
+  removeUniversity(id: String!): [University!]!
+  updateGroup(updateGroupInput: UpdateGroupInput!): Group!
+  updateStudent(updateStudentInput: UpdateStudentInput!): Student!
+  updateUniversity(updateUniversityInput: UpdateUniversityInput!): University!
+}
+
+type Query {
+  group(id: String!): Group!
+  groups: [Group!]!
+  student(id: String!): Student!
+  students: [Student!]!
+  universities: [University!]!
+  university(id: String!): University!
+}
+
+type Student {
+  age: Int!
+  email: String!
+  fullName: String!
+  id: String!
+}
+
+type University {
+  address: String!
+  id: String!
+  name: String!
+  number: Int!
+}
+
+input UpdateGroupInput {
+  id: String!
+  name: String
+}
+
+input UpdateStudentInput {
+  age: Int
+  email: String
+  fullName: String
+  id: String!
+}
+
+input UpdateUniversityInput {
+  address: String
+  id: String!
+  name: String
+  number: Int
+}
